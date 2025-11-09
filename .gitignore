@@ -1,0 +1,82 @@
+# --- Fortran modules & intermediates ---
+*.mod
+*.smod
+*.d
+*.lst
+
+# --- Objects / static libs / archives ---
+*.o
+*.obj
+*.a
+*.la
+*.lo
+*.lib
+
+# --- Executables / run outputs ---
+*.exe
+*.out
+*.stackdump
+
+# --- Assembly / maps / debug ---
+*.s
+*.map
+*.pdb
+*.ilk
+*.exp
+*.dbg
+*.log
+
+# --- Build directories (typical local patterns) ---
+build/
+build-*/
+bin/
+out/
+dist/
+tmp/
+temp/
+
+# --- CMake / Ninja (if you experiment later) ---
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+*.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+Makefile
+makefile
+
+# --- IDE/editor junk ---
+.vscode/
+.vs/
+.idea/
+*.user
+*.swp
+*.swo
+*.jetbrains/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Project-specific: keep sources, scripts, DLLs, docs ---
+!*.f90
+!*.F90
+!*.f95
+!*.F95
+!*.f
+!*.F
+!*.for
+!*.FOR
+!*.ftn
+!*.FTN
+!*.inc
+!*.INCLUDE
+!*.bat
+!*.sh
+!*.dll
+!*.dll.a
+!README*
+!LICENSE*
+!.gitignore
