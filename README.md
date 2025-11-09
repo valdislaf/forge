@@ -89,6 +89,8 @@ independent of camera pitch or yaw.
 
 ---
 
+[![build-windows](https://github.com/valdislaf/forge/actions/workflows/build.yml/badge.svg)](https://github.com/valdislaf/forge/actions/workflows/build.yml)
+
 ## 📚 About
 
 **ForGE** serves as a learning project and minimal engine foundation,  
