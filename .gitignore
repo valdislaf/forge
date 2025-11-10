@@ -27,6 +27,7 @@
 *.log
 
 # --- Build directories (typical local patterns) ---
+vsbuild/
 build/
 build-*/
 bin/
