@@ -50,6 +50,19 @@ gfortran forge.f90 -o forge.exe ^
 
 ---
 
+## 🛠️ Installing GLFW on MSYS2 (Windows)
+
+If you don't have GLFW installed, open **MSYS2 MinGW x64** (not the MSYS shell) and run:
+
+```bash
+pacman -Syu           # update the system, restart shell if prompted
+pacman -Su            # finish pending updates (if needed)
+
+pacman -S mingw-w64-x86_64-glfw mingw-w64-x86_64-pkgconf
+# optional: mingw-w64-x86_64-gcc-fortran
+
+---
+
 ## 🕹️ Controls
 
 | Key | Action |

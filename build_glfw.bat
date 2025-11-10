@@ -18,11 +18,11 @@ set "MSYS64=C:\msys64"
 
 REM --- Auto-detect toolchain (UCRT64 preferred if present) ---
 if exist "%MSYS64%\ucrt64\bin\gfortran.exe" (
-  set "MINGW_BIN=%MSYS64%\ucrt64\bin"
-  set "MINGW_LIB=%MSYS64%\ucrt64\lib"
-) else (
   set "MINGW_BIN=%MSYS64%\mingw64\bin"
   set "MINGW_LIB=%MSYS64%\mingw64\lib"
+) else (
+  set "MINGW_BIN=%MSYS64%\ucrt64\bin"
+  set "MINGW_LIB=%MSYS64%\ucrt64\lib"
 )
 
 REM --- Project files ---
