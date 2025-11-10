@@ -288,10 +288,6 @@ contains
 	  cy = cos(yrad);  sy = sin(yrad)
 	  cp = cos(prad);  sp = sin(prad)
 
-	  ! было:
-	  ! camFront = [ real(cy*cp, c_float), real(sp, c_float), real(sy*cp, c_float) ]
-
-	  ! стало (–Z при yaw=0):
 	  camFront = [ real( sy*cp, c_float),  &
 				   real( sp    , c_float), &
 				   real(-cy*cp , c_float) ]
@@ -337,11 +333,9 @@ contains
 	  if (glfwGetKey(win, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) speedNow = moveSpeed * 2.0_c_float
 	  velocity = speedNow * dt
 
-	  ! Правильный "right": орт под (camFront × camUp)
 	  right = cross3(camFront, camUp)
 	  call normalize3(right)
 
-	  ! Движение: W/S – вперёд/назад вдоль взгляда; A/D – чистый стрейф
 	  if (glfwGetKey(win, GLFW_KEY_W) == GLFW_PRESS) camPos = camPos + velocity*camFront
 	  if (glfwGetKey(win, GLFW_KEY_S) == GLFW_PRESS) camPos = camPos - velocity*camFront
 	  if (glfwGetKey(win, GLFW_KEY_A) == GLFW_PRESS) camPos = camPos - velocity*right
@@ -355,12 +349,12 @@ contains
 	  real(c_float) :: f(3), r(3), u(3)
 	  real(c_float) :: m(16)
 
-	  ! Ортонормированный базис камеры:
-	  f = camFront; call normalize3(f)              ! forward (в OpenGL в матрице используем -f)
+	  ! Orthonormal camera basis:
+	  f = camFront; call normalize3(f)              ! forward (in OpenGL we use -f in the matrix)
 	  r = cross3(f, camUp); call normalize3(r)      ! right
-	  u = cross3(r, f);  call normalize3(u)         ! up (пересчёт для ортогональности)
+	  u = cross3(r, f);  call normalize3(u)         ! up (recomputed for orthogonality)
 
-	  ! Column-major 4x4 view matrix (классический lookAt):
+	  ! Column-major 4x4 view matrix (classic lookAt):
 	  m = [ r(1),  u(1),  -f(1),  0.0_c_float,  &
 			r(2),  u(2),  -f(2),  0.0_c_float,  &
 			r(3),  u(3),  -f(3),  0.0_c_float,  &
@@ -371,8 +365,6 @@ contains
 
 	  call glMultMatrixf(m)
 	end subroutine
-
-
 
 
   subroutine set_perspective(fov_deg, aspect, znear, zfar)
