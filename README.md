@@ -20,21 +20,21 @@
 
 ---
 
-## ⬇ Скачать готовый демо-билд
+## ⬇ Download prebuilt demo
 
-Если не хочешь собирать из исходников, можно просто скачать архив:
+If you don’t want to build from source, you can just download the archive:
 
 [👉 ForGE Space Demo v0.1.0 (Windows x64)](https://github.com/valdislaf/forge/releases/latest)
 
-**Как запустить:**
+**How to run:**
 
-1. Распаковать `forge-space-demo-v0.1.0-win64.zip` в любую папку.
-2. Запустить `forge-demo.exe`.
-3. Убедиться, что рядом лежат `glfw3.dll`, `top.png` и папка `textures/`.
+1. Unpack `forge-space-demo-v0.1.0-win64.zip` to any folder.
+2. Run `forge-demo.exe`.
+3. Make sure `glfw3.dll`, `top.png` and the `textures/` folder are in the same directory as the executable.
 
-> Исходный код полного демо-проекта не публикуется,  
-> в этом репозитории лежит учебный минимальный пример (`forge.f90`)  
-> и готовая бинарная сборка движка.
+> The full demo project source code is not published.  
+> This repository contains a minimal educational example (`forge.f90`)  
+> and a prebuilt binary demo of the engine.
 
 ---
 
