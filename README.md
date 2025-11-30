@@ -24,7 +24,7 @@
 
 If you don’t want to build from source, you can just download the archive:
 
-[👉 ForGE Space Demo v0.1.0 (Windows x64)](https://github.com/valdislaf/forge/releases/latest)
+[👉 ForGE Space Demo v0.1.1 (Windows x64)](https://github.com/valdislaf/forge/releases/latest)
 
 **How to run:**
 
